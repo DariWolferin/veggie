@@ -152,7 +152,7 @@ body, html {
       letter-spacing: -0.05em;
       text-shadow: 7px 1px black;
       font-size: calc(50px + 10 * ((100vw - 320px) / 1120));
-      max-width: 440px;
+      max-width: 450px;
       margin-bottom: 60px; }
     .awesome__body span {
       color: #ffc600; }
