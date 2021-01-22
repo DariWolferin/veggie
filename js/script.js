@@ -4,6 +4,8 @@ const tabsItem = document.querySelectorAll('.tabs__item');
 const blogsTabs = document.querySelectorAll('.tabs-nav__btn');
 const tabsNavItem = document.querySelectorAll('.tabs-nav__item');
 
+const anchors = document.querySelectorAll('a[href*="#"]');
+
 tabsBtn.forEach(onTabClick);
 blogsTabs.forEach(blogsOnTabClick);
 
@@ -51,3 +53,14 @@ function blogsOnTabClick(item) {
 
 document.querySelector('.tabs__nav-btn').click();
 document.querySelector('.tabs-nav__btn').click();
+
+for(let anchor of anchors) {
+	anchor.addEventListener('click', function(event) {
+		event.preventDefault();
+		const blockID = anchor.getAttribute('href');
+		document.querySelector('' + blockID).scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		})
+	})
+}
